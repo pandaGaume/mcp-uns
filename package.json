@@ -1,0 +1,53 @@
+{
+    "name": "@cyanmycelium/mcp-uns",
+    "version": "0.1.0",
+    "description": "Unified Namespace identities for mcp-broker domains: UNS ids, their broker resource paths, and per-id access decided by the broker.",
+    "type": "module",
+    "license": "Apache-2.0",
+    "author": "Guillaume Pelletier (CyanMycelium)",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/pandaGaume/mcp-uns.git"
+    },
+    "homepage": "https://github.com/pandaGaume/mcp-uns#readme",
+    "bugs": {
+        "url": "https://github.com/pandaGaume/mcp-uns/issues"
+    },
+    "keywords": [
+        "mcp",
+        "uns",
+        "unified-namespace",
+        "mcp-broker",
+        "isa-95",
+        "cyanmycelium"
+    ],
+    "engines": {
+        "node": ">=20.11.0"
+    },
+    "sideEffects": false,
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsup",
+        "typecheck": "tsc -p tsconfig.json --noEmit",
+        "test": "vitest run",
+        "format": "prettier --check \"src/**/*.ts\" \"tests/**/*.ts\"",
+        "format:fix": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\""
+    },
+    "devDependencies": {
+        "@types/node": "^20.11.0",
+        "prettier": "^3.2.0",
+        "tsup": "^8.5.1",
+        "typescript": "^5.4.0",
+        "vitest": "^1.6.0"
+    }
+}
